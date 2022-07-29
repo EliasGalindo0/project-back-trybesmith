@@ -50,6 +50,8 @@ services:
       - 33060:33060
     environment:
       MYSQL_ROOT_PASSWORD: password
+    # Platform para Mac M1
+    platform: linux/amd64
 
 # Lista de redes que os containeres irão utilizar
 networks:
