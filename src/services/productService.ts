@@ -7,6 +7,11 @@ const productService = {
     const insertProdcut = await productModel.add(product);
     return insertProdcut;
   },
+
+  async getAll(): Promise<IProduct[]> {
+    const products = await productModel.getAll();
+    return products;
+  },
 };
 
 export default productService;

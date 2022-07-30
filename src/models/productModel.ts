@@ -17,6 +17,15 @@ const productModel = {
 
     return insertId;
   },
+
+  async getAll(): Promise<IProduct[]> {
+    const query = `SELECT * FROM
+    Trybesmith.Products;
+    `;
+    const [data] = await connection.query(query);
+
+    return data as IProduct[];
+  },
 };
 
 export default productModel;
